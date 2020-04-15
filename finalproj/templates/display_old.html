@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency List</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">
+      List of countries and their currencies with respect to US dollar
+    </h1>
+    {% for i in x %} {% if i == "quotes" %}
+    <h3 style="text-align: center;">UAE = {{x[i]['USDAED']}}</h3>
+    <h3 style="text-align: center;">Canada = {{x[i]['USDCAD']}}</h3>
+    <h3 style="text-align: center;">India = {{x[i]['USDINR']}}</h3>
+    <h3 style="text-align: center;">Australia = {{x[i]['USDAUD']}}</h3>
+    <h3 style="text-align: center;">Bangladesh = {{x[i]['USDBDT']}}</h3>
+    <h3 style="text-align: center;">Brazil = {{x[i]['USDBRL']}}</h3>
+    <h3 style="text-align: center;">Cameroon = {{x[i]['USDXAF']}}</h3>
+    <h3 style="text-align: center;">Chile = {{x[i]['USDCLP']}}</h3>
+    <h3 style="text-align: center;">China = {{x[i]['USDCNY']}}</h3>
+    <h3 style="text-align: center;">Cuba = {{x[i]['USDCUP']}}</h3>
+    <h3 style="text-align: center;">Denmark = {{x[i]['USDDKK']}}</h3>
+    <h3 style="text-align: center;">Egypt = {{x[i]['USDEGP']}}</h3>
+    <h3 style="text-align: center;">European Countries = {{x[i]['USDEUR']}}</h3>
+    <h3 style="text-align: center;">Hong kong = {{x[i]['USDHKD']}}</h3>
+    <h3 style="text-align: center;">Hungary = {{x[i]['USDHUF']}}</h3>
+    <h3 style="text-align: center;">Japan = {{x[i]['USDJPY']}}</h3>
+    <h3 style="text-align: center;">South Korea = {{x[i]['USDKRW']}}</h3>
+    <h3 style="text-align: center;">Kuwait = {{x[i]['USDKWD']}}</h3>
+    <h3 style="text-align: center;">Malysia = {{x[i]['USDMYR']}}</h3>
+    <h3 style="text-align: center;">Mexico = {{x[i]['USDMXN']}}</h3>
+    <h3 style="text-align: center;">New zealand = {{x[i]['USDNZD']}}</h3>
+    <h3 style="text-align: center;">South Africa = {{x[i]['USDZAR']}}</h3>
+    <h3 style="text-align: center;">Singapore = {{x[i]['USDSGD']}}</h3>
+    <h3 style="text-align: center;">Switzerland = {{x[i]['USDCHF']}}</h3>
+    <h3 style="text-align: center;">Turkey = {{x[i]['USDTRY']}}</h3>
+    <h3 style="text-align: center;">United Kingdom = {{x[i]['USDGBP']}}</h3>
+    <h3 style="text-align: center;">Canada = {{x[i]['USDCAD']}}</h3>
+
+    {% endif %} {% endfor %}
+  </body>
+</html>
