@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #myInput {
+        background-image: url("/css/searchicon.png");
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        align-items: center;
+        width: 35%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
+
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+      body {
+        background-image: url(../images/banner.png);
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center;">
+      List of countries and their currencies with respect to US dollar
+    </h2>
+
+    <input
+      type="text"
+      id="myInput"
+      onkeyup="myFunction()"
+      placeholder="Search for names of countries"
+      title="Type in a name"
+    />
+
+    <p>Last updated on :</p>
+    <p id="date"></p>
+
+    <script>
+      n = new Date();
+      y = n.getFullYear();
+      m = n.getMonth() + 1;
+      d = n.getDate();
+      document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
+
+    <ul id="myUL">
+      {% for i in x %} {% if i == "quotes" %}
+      <li>
+        <a href="#" style="text-align: center;">
+          UAE &emsp; : &emsp;{{x[i]['USDAED']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Canada &emsp; : &emsp;{{x[i]['USDCAD']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          India &emsp; : &emsp;{{x[i]['USDINR']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Australia &emsp; : &emsp;{{x[i]['USDAUD']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Bangladesh &emsp; : &emsp;{{x[i]['USDBDT']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Brazil &emsp; : &emsp;{{x[i]['USDBRL']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Cameroon &emsp; : &emsp;{{x[i]['USDXAF']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Chile &emsp; : &emsp;{{x[i]['USDCLP']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          China &emsp; : &emsp;{{x[i]['USDCNY']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Cuba &emsp; : &emsp;{{x[i]['USDCUP']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Denmark &emsp; : &emsp;{{x[i]['USDDKK']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Egypt &emsp; : &emsp;{{x[i]['USDEGP']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          European Countries &emsp; : &emsp;{{x[i]['USDEUR']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Hong kong &emsp; : &emsp;{{x[i]['USDHKD']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Hungary &emsp; : &emsp;{{x[i]['USDHUF']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Japan &emsp; : &emsp;{{x[i]['USDJPY']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          South Korea &emsp; : &emsp;{{x[i]['USDKRW']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Kuwait &emsp; : &emsp;{{x[i]['USDKWD']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Malysia &emsp : &emsp;{{x[i]['USDMYR']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Mexico &emsp; : &emsp;{{x[i]['USDMXN']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          New zealand &emsp; : &emsp;{{x[i]['USDNZD']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          South Africa &emsp; : &emsp;{{x[i]['USDZAR']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Singapore &emsp; : &emsp;{{x[i]['USDSGD']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Switzerland &emsp; : &emsp;{{x[i]['USDCHF']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          Turkey &emsp; : &emsp;{{x[i]['USDTRY']}} &nbsp; US$
+        </a>
+      </li>
+      <li>
+        <a href="#" style="text-align: center;">
+          United Kingdom &emsp; : &emsp;{{x[i]['USDGBP']}} &nbsp; US$
+        </a>
+      </li>
+
+      {% endif %} {% endfor %}
+    </ul>
+
+    <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

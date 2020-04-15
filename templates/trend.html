@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <title>Currency Converter</title>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  
+  
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button"
+          ><b>$ Currency Converter</b></a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="/" class="w3-bar-item w3-button">Home</a>
+        </div>
+      </div>
+    </div><br/><br/><br/><br/>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["imagelinechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var chart = new google.visualization.ImageLineChart(document.getElementById('chart_div'));
+
+        chart.draw(data, {width: 400, height: 240, min: 0});
+      }
+    </script>
+    <div id="chart_div" style="width: 400px; height: 240px;"></div>
+
+
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-16">
+      <p>
+        Data Programming final project
+      </p>
+</div>
+  </body>
+</html>
